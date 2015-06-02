@@ -1,0 +1,134 @@
+@import "variables.scss";
+@import "utilities.scss";
+
+$nav-padding: $base-padding*1.05;
+$nav-text-color: $base-text-color !default;
+$nav-hover-color: $nav-text-color !default;
+$nav-hover-background: #666 !default;
+$nav-background: $base-background !default;
+$nav-background-secondary: #333 !default;
+$nav-button-hover-background: $nav-hover-background !default;
+$nav-font-face: $base-header-font;
+$nav-font: $nav-padding $nav-font-face;
+$nav-letter-spacing: 0.05*$base-padding;
+
+.slicknav_nav {
+  color: $nav-text-color;
+  margin: 0;
+  padding: 0 0 0.275*$nav-padding 0;
+  clear: both;
+  font: $nav-font;
+  font-size: 0.875*$nav-padding;
+  letter-spacing: $nav-letter-spacing; 
+  &, ul {
+    list-style: none;
+    overflow:hidden;
+  }
+  ul {
+    padding: 0;
+    margin-left: 0.5*$nav-padding;
+  }
+  ul, li {
+    display: block;
+  }
+  .slick_arrow {
+    font-size: 0.8*$nav-padding;
+    margin: 0 0 0 0.5*$nav-padding;
+  }
+  .slicknav_item {
+    cursor: pointer;
+  }
+  .slicknav_row {
+    display: block;
+    padding: 0.5*$nav-padding 0.5*$nav-padding;
+    margin: 0.1*$nav-padding 0.25*$nav-padding;
+  }
+  a {
+    @include text-shadow($base-shadow);
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5*$nav-padding 0.5*$nav-padding;
+    margin: 0.1*$nav-padding 0.25*$nav-padding;
+    color: $nav-text-color;
+    &:hover {
+      @include border-radius($base-border-radius);
+      color: $nav-hover-color;
+      background: $nav-hover-background;
+    }
+  }
+  .slicknav_item a,
+  .slicknav_parent-link a {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+  .slicknav_txtnode {
+      margin-left: $nav-padding;   
+  }
+}
+
+
+.slicknav_menu {
+  // IE6/7 support
+  *zoom: 1;
+  font: $nav-font;
+  background: $nav-background;
+  .slicknav_menutxt {
+    display: block;
+    line-height: 1.35*$nav-padding;
+    float: left;
+    color: $nav-text-color;
+    @include text-shadow($base-shadow);
+  }
+  .slicknav_icon {
+    float: left;
+    margin: 0.225*$nav-padding 0 0 0.5*$nav-padding;
+  }
+  .slicknav_no-text {
+    margin: 0;
+  }
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* Button */
+.slicknav_btn {
+  position: relative;
+  display: block;
+  vertical-align: middle;
+  float: right;
+  padding: 0.438*$nav-padding 0.625*$nav-padding 0.438*$nav-padding 0.625*$nav-padding;
+  line-height: 1.125*$nav-padding;
+  cursor: pointer;
+  font-size: $nav-padding;
+  letter-spacing: $nav-letter-spacing; 
+  margin: 0.5*$nav-padding 0.5*$nav-padding 0.6*$nav-padding;
+  text-decoration:none;
+  @include text-shadow($base-shadow);
+  @include border-radius($base-border-radius);
+  background: $nav-background-secondary;
+  &:hover {
+    background: $nav-button-hover-background;
+  }
+}
+
+/* Button Lines */
+.slicknav_icon-bar
+{
+  display: block;
+  width: 1.125*$nav-padding;
+  height: 0.125*$nav-padding;
+  @include border-radius($base-border-radius/4);
+  @include box-shadow($base-shadow);
+  background: $nav-text-color;
+  & + & {
+    margin-top: 0.188*$nav-padding;
+  }
+}
+

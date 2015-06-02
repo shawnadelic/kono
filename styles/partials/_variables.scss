@@ -1,0 +1,30 @@
+// Media-specific variables
+
+$tablet-width: 568px;
+$tablet-container-width: 95%;
+$desktop-width: 768px;
+$desktop-container-width: 90%;
+
+// Base variables
+
+$base-padding: 1rem;
+$base-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+$base-border-radius: 4px;
+$base-text-color: #fff;
+$base-hover-color: #666;
+$base-background: #222;
+$base-font: "Source Sans Pro";
+$base-font-size: 1rem;
+$base-header-font: "Changa One";
+
+// Navigation variables
+
+//$nav-items: 5;
+$nav-text-color: $base-text-color;
+$nav-hover-color: $nav-text-color;
+$nav-hover-background: #666;
+$nav-background: $base-background;
+$nav-background-secondary: #333;
+$nav-button-hover-background: $nav-hover-background;
+
+
