@@ -48,3 +48,13 @@ $column-map: (
   margin-top: $base-padding;
 }
 
+.inset {
+  padding: 0 0.5rem;
+}
+
+@media (min-width: $tablet-width){
+  .inset {
+    padding: 0;
+  }
+}
+

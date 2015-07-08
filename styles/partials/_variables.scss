@@ -13,18 +13,16 @@ $base-border-radius: 4px;
 $base-text-color: #fff;
 $base-hover-color: #666;
 $base-background: #222;
-$base-font: "Source Sans Pro";
+$base-font-face: "Source Sans Pro";
+$base-font: $base-font-face;
 $base-font-size: 1rem;
-$base-header-font: "Changa One";
+$base-header-font: bold $base-font-face;
 
 // Navigation variables
 
-//$nav-items: 5;
 $nav-text-color: $base-text-color;
 $nav-hover-color: $nav-text-color;
 $nav-hover-background: #666;
 $nav-background: $base-background;
 $nav-background-secondary: #333;
 $nav-button-hover-background: $nav-hover-background;
-
-

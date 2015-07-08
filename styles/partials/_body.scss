@@ -1,0 +1,28 @@
+@import "variables.scss";
+
+$body-font-size: $base-font-size;
+$body-font: $base-font;
+$body-header-font: $base-header-font;
+$body-header-font-df: 0.1rem;
+
+body {
+  font: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: $body-header-font;
+}
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: $body-font-size * 1.75 - $body-header-font-df * ($i - 1);
+    margin-bottom: $body-font-size - $body-header-font-df * 2 * ($i - 1);
+  }
+}
+
+p {
+  margin: 0;
+}
+
+p + p {
+  margin: $body-font-size*0.5 0 0;
+}

@@ -1,7 +1,7 @@
 @import "variables.scss";
 
 $nav-font-size: $base-font-size;
-$nav-font: $nav-font-size * 1.25 $base-header-font;
+$nav-font: bold $nav-font-size * 1.25 $base-header-font;
 $nav-padding: $base-padding;
 $nav-background-color: white;
 $nav-background-color-hover: grey;
