@@ -1,0 +1,50 @@
+// Grid Structure
+
+$gutter-width: 1%;
+$column-map: (
+  1: "one",
+  2: "two",
+  3: "three",
+  4: "four",
+  5: "five",
+  6: "six",
+  7: "seven",
+  8: "eight",
+  9: "nine",
+  10: "ten",
+  11: "eleven",
+  12: "twelve"
+);
+
+@media (min-width: $tablet-width) {
+  @each $digit, $number in $column-map {
+    .#{$number}-cell.column {
+      width: (100% - ( $gutter-width * (12/$digit - 1)))*($digit/12);
+    }
+    .#{$number}-cell-offset.column {
+      margin-left: (100% - ( $gutter-width * (12/$digit - 1)))*($digit/12) + $gutter-width;
+    }
+  }
+  .column {
+    & + & {
+      margin-left: $gutter-width;
+    }
+    float: left;
+    box-sizing: border-box;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.empty-cell:after {
+  content: ".";
+  visibility: hidden;
+}
+
+.row + .row {
+  margin-top: $base-padding;
+}
+
